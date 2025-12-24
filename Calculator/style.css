@@ -1,0 +1,116 @@
+@font-face {
+    font-family: SF;
+    src: url(SF-Compact-Rounded-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'SF', sans-serif;
+}
+
+body {
+    padding: 10px;
+}
+
+.container {
+    padding: 10px;
+    width: fit-content;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+    width: 350px;
+    height: 550px;
+    border-radius: 2%;
+}
+
+#screen {
+    color: aliceblue;
+    text-align: end;
+    font-size: 40px;
+    padding-top: 20px;
+    height: 80px;
+    width: 100%;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-gap: 10px;
+}
+
+.number {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.symbol {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.symbol-1 {
+    grid-area: 1 / 2 / 2 /3;
+    grid-template-rows: repeat(3 1fr);
+}
+
+.symbol-2 {
+    grid-area: 2 / 1 / 3 / 3;
+    grid-template-columns: repeat(3 1fr);
+    grid-auto-flow: column;
+}
+
+.symbol-3 {
+    grid-area: 3 / 1 / 4 / 3;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2 1fr);
+}
+
+button {
+    height: 80px;
+    width: 80px;
+    font-size: 27px;
+    border-radius: 50%;
+    border: 0;
+    transition: all 0.1s;
+}
+
+
+.symbol-1 button,
+.symbol-2 button {
+    background-color: #FF9500;
+    color: white;
+}
+
+.number button,
+.black {
+    background-color: #505049;
+    color: white;
+}
+
+.symbol-3 button {
+    background-color: #D4D4D2;
+    color: black;
+    width: 170px;
+    border-radius: 40px;
+    text-align: left;
+    padding: 20px;
+    font-size: 35px;
+}
+
+button:hover {
+    scale: 1.05;
+}
+
+button:active {
+    scale: 1;
+    box-shadow: none;
+
+}
